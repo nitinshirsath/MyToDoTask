@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragment_todays_task">
+
+    <fragment
+        android:id="@+id/fragment_todays_task"
+        android:name="com.example.mytodotask.view.fragments.TodayTaskFragment">
+        <action
+            android:id="@+id/action_frag_todays_to_prev"
+            app:destination="@id/fragment_finished_task" />
+        <action
+            android:id="@+id/action_frag_todays_to_new"
+            app:destination="@id/fragment_new_task" />
+        <action
+            android:id="@+id/action_frag_todays_to_all_history"
+            app:destination="@id/fragment_all_history_task" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_finished_task"
+        android:name="com.example.mytodotask.view.fragments.FinishTaskFragment" />
+    <fragment
+        android:id="@+id/fragment_new_task"
+        android:name="com.example.mytodotask.view.fragments.CreateUpdateTaskFragment" />
+    <fragment
+        android:id="@+id/fragment_all_history_task"
+        android:name="com.example.mytodotask.view.fragments.TaskHistoryFragment" />
+</navigation>
